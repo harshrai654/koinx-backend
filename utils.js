@@ -13,7 +13,7 @@ const dbName = "account_info";
  * calculated
  * balance is in INR.
  * @param {*} account: account id of user
- * @returns
+ * @returns Total balance of given account
  */
 async function getBalance(account) {
 	const db = client.db(dbName);

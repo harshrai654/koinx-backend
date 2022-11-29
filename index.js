@@ -13,6 +13,10 @@ const fetchRateInterval = 10 * 60 * 1000; //10 minutes
 
 initialise();
 
+app.get("/", (req, res) => {
+	res.send("KoinX Backend developer tasks.");
+});
+
 app.get("/transactions", verifyAccount, async (req, res) => {
 	const { account = "" } = req.query;
 	const data = await getTransactions(account);
